@@ -29,7 +29,7 @@ main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     column-gap: 1.6rem;
-    margin-top: 16px 40px 0;
+    margin: 16px 40px 0;
 }
 
 .images button {
