@@ -80,3 +80,19 @@ function toggleSelect(event) {
     input.value = button.dataset.value
 
 }
+
+function validate(event) {
+    document.querySelector(".map-container")
+    const lat = document.querySelector("[name=lat")
+    const long = document.querySelector("[name=lng]")
+
+    //validar se lat e long estão preenchidos
+    if (lat.value == "" && long.value == "") {
+        event.preventDefault()
+        alert('Clique em um ponto no mapa')
+    }
+
+    //salvar um orfanato
+
+
+}
