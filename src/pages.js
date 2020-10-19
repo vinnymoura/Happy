@@ -1,5 +1,6 @@
 const Database = require("./database/db");
 const saveOrphanage = require("./database/saveOrphanage");
+const saveup = require("./database/saveup")
 
 module.exports = {
     index(request, response) {
@@ -18,6 +19,9 @@ module.exports = {
 
             orphanage.images = orphanage.images.split(",");
             orphanage.firstImage = orphanage.images[0];
+
+            orphanage.file = orphanage.file.split(",");
+
 
             // práticar if ternário após finalizar o app
             if (orphanage.open_on_weekends == "0") {
@@ -68,6 +72,7 @@ module.exports = {
                 about: fields.about,
                 whatsapp: fields.whatsapp,
                 images: fields.images.toString(),
+                file: fields.file,
                 instructions: fields.instructions,
                 opening_hours: fields.opening_hours,
                 open_on_weekends: fields.open_on_weekends,
@@ -80,5 +85,6 @@ module.exports = {
         return response.redirect('/orphanages')
 
 
-    },
+    }
+
 };

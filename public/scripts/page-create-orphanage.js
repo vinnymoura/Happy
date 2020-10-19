@@ -30,6 +30,7 @@ map.on("click", function(event) {
         .addTo(map)
 })
 
+
 //photos upload
 function addPhotoField() {
     //pegar o container de photos #images
@@ -90,9 +91,16 @@ function validate(event) {
     if (lat.value == "" && long.value == "") {
         event.preventDefault()
         alert('Clique em um ponto no mapa')
+
     }
 
     //salvar um orfanato
 
 
+};
+
+document.querySelector("#home").addEventListener("click", myFunction, false);
+
+function myFunction() {
+    window.location.href = "/";
 }

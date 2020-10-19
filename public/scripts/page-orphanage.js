@@ -55,3 +55,10 @@ function selectImage(event) {
     // adicionar a classe .active para este botão
     button.classList.add("active")
 }
+
+document.querySelector("#home").addEventListener("click", myFunction, false);
+
+function myFunction() {
+    window.location.href = "/";
+
+}

@@ -10,6 +10,7 @@ function execute(db) {
             about TEXT, 
             whatsapp TEXT,
             images TEXT,
+            file TEXT,
             instructions TEXT,
             opening_hours TEXT,
             open_on_weekends TEXT

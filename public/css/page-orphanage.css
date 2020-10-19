@@ -127,3 +127,7 @@ main {
     border: 1px solid #ffbcd4;
     color: #ff669d;
 }
+
+#home {
+    cursor: pointer;
+}

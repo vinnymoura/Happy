@@ -40,3 +40,10 @@ orphanagesSpan.forEach(function(span) {
     addMarker(orphanage)
 
 })
+
+document.querySelector("#initial").addEventListener("click", myFunction, false);
+
+function myFunction() {
+    window.location.href = "/";
+
+}

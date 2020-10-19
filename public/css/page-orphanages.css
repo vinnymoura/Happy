@@ -94,3 +94,7 @@ a.create-orphanage:hover {
     font: 700 2rem/1 'Nunito', sans-serif;
     z-index: 500;
 }
+
+#initial {
+    cursor: pointer;
+}

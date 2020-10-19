@@ -2,6 +2,10 @@
 const express = require("express");
 const path = require("path");
 const pages = require("./pages.js");
+const multer = require('multer');
+const upload = multer({ destination: "./uploads/" })
+
+
 // iniciando o express
 const server = express()
     // utilizar o body request
@@ -10,6 +14,7 @@ const server = express()
 // ultilizando os arquivos estáticos
 server
     .use(express.static("public"))
+
 
 // configurar tamplate engines
 .set("views", path.join(__dirname, "views"))
@@ -20,7 +25,17 @@ server
     .get("/orphanage", pages.orphanage)
     .get("/orphanages", pages.orphanages)
     .get("/create-orphanage", pages.createOrphanage)
-    .post("/save-orphanage", pages.saveOrphanage);
+    .post("/save-orphanage", pages.saveOrphanage)
+
+
+
+
+
+
+
 
 //Ligar o servidor
-server.listen(5500);
+server.listen(5500, () => {
+    console.log("Servidor on-line")
+
+});
